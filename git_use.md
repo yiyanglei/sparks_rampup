@@ -12,3 +12,6 @@ $ git init
 
 5.显示所有本地分支
 $ git branch
+
+6.查看提交历史
+$ git log
