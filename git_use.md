@@ -1,1 +1,3 @@
-This is my first git practice!
+1. 将本地分支变更推送到远程分支
+$ Git push
+
