@@ -3,3 +3,9 @@ $ git push
 
 2.更新本地仓库至最新改动
 $ git pull
+
+3. 克隆远程版本库
+$ git clone 
+
+4. 初始化本地版库
+$ git init
