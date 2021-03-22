@@ -9,3 +9,6 @@ $ git clone
 
 4.初始化本地版库
 $ git init
+
+5.显示所有本地分支
+$ git branch
