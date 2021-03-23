@@ -13,5 +13,10 @@ $ git init
 5.显示所有本地分支
 $ git branch
 
+<<<<<<< HEAD
 6.添加文件至缓存
 $ git add
+=======
+6.查看提交历史
+$ git log
+>>>>>>> 01e08d52f8e46a0580a8a4d9e848230e596a5aae
