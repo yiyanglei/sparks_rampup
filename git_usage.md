@@ -12,8 +12,4 @@ git commit -m " [NVOS-xxxx] test change"  此时可以看到heool.txt文件图�
 
 echo "\n33333333333333">>hello.txt  此时可以看到heool.txt文件图标左下角有红色感叹号
 
-git add hello.txt
-git commit -m "删除2，添加3，4"
-
-git log 查看（所有）日志
 
