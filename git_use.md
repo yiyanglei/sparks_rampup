@@ -21,11 +21,9 @@ $ git add
 
 8.查看提交历史
 $ git log
-<<<<<<< HEAD
-=======
 
 9.查看代码修改情况
 $ git status
 
 10.查看修改内容
-$ git diff
+$ git dif
