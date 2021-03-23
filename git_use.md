@@ -21,3 +21,10 @@ $ git add
 
 8.查看提交历史
 $ git log
+<<<<<<< HEAD
+=======
+
+8.查看代码修改情况
+$ git status
+>>>>>> 01e08d52f8e46a0580a8a4d9e848230e596a5aae
+>>>>>>> ExerciseHu
