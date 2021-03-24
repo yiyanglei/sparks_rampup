@@ -26,4 +26,4 @@ $ git log
 $ git status
 
 10.查看修改内容
-$ git dif
+$ git diff
