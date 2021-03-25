@@ -28,4 +28,7 @@ $ git status
 10.查看修改内容
 $ git diff
 
-11.git remote add origin 网址
+11.git remote add origin 网址11
+
+12.git remote -v
+	查看远程的信息
