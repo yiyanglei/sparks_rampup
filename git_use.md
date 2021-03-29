@@ -1,7 +1,7 @@
 ## 1.git init <dir>
 	在指定的目录下创建一个空的git repo。不带参数将在当前目录下创建一个git repo。
 ## 2.git clone <repo>  
-克隆一个指定repo到本地。指定的repo可以是本地⽂件系统或者由HTTP或SSH指定的远程路径。     
+    克隆一个指定repo到本地。指定的repo可以是本地⽂件系统或者由HTTP或SSH指定的远程路径。     
 ## 3.git config user.name <name>  
 	针对当前repo配置⽤户名。使⽤--global参数将配置全局⽤户名。    
 ## 4.git add <dir> 
@@ -62,6 +62,11 @@
 	将本地分⽀推送到远程。不要使⽤--force参数，除⾮你完全明⽩此操作的后果。  
 ## 32.git push <remote> --tags  
 	使⽤push命令并不会⾃动将本地tag推送到远程。加上--tags参数会将所有本地tag推送到远程。  
+## 33.git merge <branch>   
+    合并指定分支到到当前分支
+## 34.git rebase <branch>   
+    衍合指定分支到当前分支
+
 
 
 
