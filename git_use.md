@@ -68,7 +68,5 @@
     衍合指定分支到当前分支
 ## 35.git tag
 	列出所有本地标签
-## 36.git tag <tagname>
-	基于最新提交创建标签
-## 37.git tag -d <tagname>
+## 36.git tag -d <tagname>
 	删除标签
