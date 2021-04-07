@@ -12,10 +12,10 @@
 #include "spark_hash.h"
 
 /* HASH buckets */
-static spark_filter_t * gap_spark_buckts[SPARK_MAX_HASH_SIZE];
+static spark_filter_t * gp_spark_buckts[SPARK_MAX_HASH_SIZE];
 
 /* filter entry memorys */
-static spark_filter_t ga_spark_entrys[SPARK_MAX_ENTRY_NUM];
+static spark_filter_t g_spark_entrys[SPARK_MAX_ENTRY_NUM];
 
 /**
  * @brief hash function 
@@ -39,9 +39,9 @@ static spark_filter_t * spark_entry_new(void)
 
     for (unsigned short index  = 0U; index < SPARK_MAX_ENTRY_NUM; ++index)
     {
-        if (SPARK_INVALID_COMPONENT_ID == ga_spark_entrys[index].component_id)
+        if (SPARK_INVALID_COMPONENT_ID == g_spark_entrys[index].component_id)
         {
-            p_new_entry = &ga_spark_entrys[index];
+            p_new_entry = &g_spark_entrys[index];
             break ;
         }
     } 
@@ -83,7 +83,7 @@ unsigned int spark_insert(spark_component_id_t component_id,
 
     /* 2: find existed entry */ 
     spark_filter_t * p_previous = NULL;
-    spark_filter_t * p_current  = gap_spark_buckts[index];
+    spark_filter_t * p_current  = gp_spark_buckts[index];
     
     while ((NULL != p_current) && (component_id != p_current->component_id))
     {
@@ -109,7 +109,7 @@ unsigned int spark_insert(spark_component_id_t component_id,
         }
         else
         {
-            gap_spark_buckts[index] = p_current;
+            gp_spark_buckts[index] = p_current;
             p_current->p_next = NULL;
         }
     }
@@ -137,7 +137,7 @@ void spark_delete(spark_component_id_t component_id)
 
     /* 2: find existed entry */ 
     spark_filter_t * p_previous = NULL;
-    spark_filter_t * p_current  = gap_spark_buckts[index];
+    spark_filter_t * p_current  = gp_spark_buckts[index];
     
     while ((NULL != p_current) && (component_id != p_current->component_id))
     {
@@ -155,7 +155,7 @@ void spark_delete(spark_component_id_t component_id)
         }
         else
         {
-            gap_spark_buckts[index] = NULL;
+            gp_spark_buckts[index] = NULL;
         }
 
         spark_entry_free(p_current);
