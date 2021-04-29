@@ -74,6 +74,7 @@ void main(void)
     {
         printf("0b%s + 0b%s = 0b%s", a, b, ret);
         free(ret);
+	ret=NULL;
     }
 
     return;
