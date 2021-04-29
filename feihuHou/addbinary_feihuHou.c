@@ -3,6 +3,18 @@
 #include <string.h>
 
 
+/*
+每周一题
+    两个二进制字符串（ 字符串非空且只包含数字 1 和 0），返回它们的和（用二进制表示）。
+示例 1:
+    输入: a = "11", b = "1"
+    输出: "100"
+示例 2:
+    输入: a = "1010", b = "1011"
+    输出: "10101"
+*/
+
+
 char* addBinary(char* a, char* b) {
 	if (NULL == a || NULL == b) {
 		return NULL;
@@ -52,15 +64,17 @@ char* addBinary(char* a, char* b) {
 	return res;
 }
 
+void main(void)
+{
+    char * a = "1011";
+    char * b = "0111"; 
+    
+    char *ret = addBinary(a, b);
+    if (ret)
+    {
+        printf("0b%s + 0b%s = 0b%s", a, b, ret);
+        free(ret);
+    }
 
-
-int main() {
-
-	const char *a = "1";
-	const char *b = "1";
-	char *c=addBinary((char *)a,(char *)b);
-	printf("%s\n",c);
-	free(c);
-	c=NULL;
-	return 0;
+    return;
 }

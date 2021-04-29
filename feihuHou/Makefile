@@ -3,11 +3,11 @@ OBJS = $(SRCS:.c = .o)
 CC = gcc
 CCFLAGS = -g -Wall -O0
 
-main : $(OBJS)
-	$(CC) $^ -o $@ 
+addbinary_feihuHou : $(OBJS)
+	$(CC) -o $@ $< 
 
 %.o : %.c
-	$(CC) -c $< $(CCFLAGS)
+	$(CC) -o  $@ $^ $(CCFLAGS)
 
 clean:
-	rm *.o main
+	rm *.o addbinary_feihuHou
