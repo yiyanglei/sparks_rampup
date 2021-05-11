@@ -51,11 +51,11 @@ void merge(int* nums1, int m, int* nums2, int n)
 void main(void)
 {
     int num1[MAX_ARRAY_SIZE] = {1, 2, 2, 4, 7, 9};
-    //
-	//int num2[NUM2_SIZE] = { 3, 5, 8 };
-	int num2[] = { NULL };
+    
+	int num2[NUM2_SIZE] = { 3, 5, 8 };
+	
 
-	printf("%d", sizeof(num2)/sizeof(int));
+	
 	
 	//int num1[MAX_ARRAY_SIZE] = {1, 2, 3};
 	//int num2[NUM2_SIZE] = { 3,3,3,4,4,4};  /*test_01:NUM1_SIZE < NUM2_SIZE*/ 
@@ -66,11 +66,11 @@ void main(void)
 
 	//merge(0, NUM1_SIZE, num2, 0);/*test_03: NUM1_SIZE == 0*/ 
 
-   /* printf("Merge Result:\n ");
+    printf("Merge Result:\n ");
     for (int i=0; i<MAX_ARRAY_SIZE; i++)
     {
         printf("%d ", num1[i]);
     }
-    printf("\n\n ");*/
+    printf("\n\n ");
 	system("pause");
 }
