@@ -15,34 +15,51 @@
     输入: a = "1010", b = "1011"
     输出: "10101"
 */
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-#define max(a,b) (a>b ? a:b)
+#ifndef MAX
+#define MAX(a, b) ((a) >(b) ? (a) : (b))
+#endif
+
+// COMMENT(Lei Lv) 养成注释的好习惯
 //addbinary implement
-char * addBinary(char *a, char *b)
+char * addBinary(const char * a, const char * b)
 {
-    int a_len =strlen(a);
-    int b_len =strlen(b);
-    int ret_len=max(a_len,b_len)+2;
+    int a_len = strlen(a);
+    int b_len = strlen(b);
+    int ret_len = MAX(a_len, b_len) + 2;
 
-    char *ret=malloc(sizeof(char)*ret_len);
-    ret[ret_len-1]='\0';
-    int c=0;
-    int k=ret_len-2;
-    for(int i=a_len-1,j=b_len-1;i>=0||j>=0;i--,j--,k--)
+    // COMMENT(Lei Lv): result并不恒为非空，访问空指针造成的后果可以自行科普
+    char * ret = malloc(sizeof(char) * ret_len);
+    if (NULL != ret)
     {
-        
-        int a_bit=(i>=0?a[i]-'0':0);
-        int b_bit=(j>=0?b[j]-'0':0);
-        int bit_sum = a_bit + b_bit+c;
+        ret[ret_len - 1] = '\0';
 
-        ret[k]='0'+bit_sum%2;
-        c=bit_sum/2;
+        int c = 0;
+        int k = ret_len - 2;
+
+        for (int i = a_len - 1, j = b_len - 1; ((i >= 0) || (j >= 0)); i--, j--, k--)
+        {
+            int a_bit = (i >=0 ? a[i] - '0': 0);
+            int b_bit = (j>=0 ? b[j] - '0' : 0);
+            int bit_sum = a_bit + b_bit + c;
+
+            ret[k] = '0'+ bit_sum % 2;
+            c = bit_sum / 2;
+        }
+
+        // COMMENT(Lei Lv): 1.目前实现的是一个函数，相加的结果不一定有进位; 2.malloc返回出来的内存并未被初始化
+        if (c != 0)
+        {
+            ret[k] = '1';
+        }
+        else
+        {
+            ret[k] = '0';    
+        }
     }
-    if(c!=0)
-       ret[k]='1';
 
     return ret;
 }
@@ -50,11 +67,11 @@ char * addBinary(char *a, char *b)
 
 void main(void)
 {
-    char *a ="11";
-    char *b ="1";
+    char * a = "11";
+    char * b = "1";
 
-    char *ret =addBinary(a,b);
-    if(ret)
+    char * ret = addBinary(a, b);
+    if(NULL != ret)
     {
         printf("0b%s + 0b%s = 0b%s\n", a, b, ret);
         free(ret);
