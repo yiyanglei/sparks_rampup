@@ -19,13 +19,10 @@
 
 void merge(int* nums1, int m, int* nums2, int n)
 {
-    //fill your code here
     int* newA = (int*)malloc(sizeof(int)*(m + n));
-	int idx = 0;
-	int n1 = 0;
-	int n2 = 0;
-	//合并
-	while (n1 < m && n2 < n){
+	int idx = 0,n1 = 0, n2 = 0;
+	while (n1 < m && n2 < n)
+	{
 		if (nums1[n1] <= nums2[n2]){
 			newA[idx++] = nums1[n1++];
 		}
@@ -41,7 +38,7 @@ void merge(int* nums1, int m, int* nums2, int n)
 		memcpy(newA + idx, nums2 + n2, sizeof (int)*(n - n2));
 	}
 	memcpy(nums1,newA,sizeof(int)*(m+n));
-	//free(newA);
+	free(newA);
 }
 
 int main(void)

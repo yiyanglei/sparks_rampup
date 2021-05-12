@@ -3,6 +3,11 @@
         "__string": "c",
         "cstring": "c",
         "memory": "c",
-        "utility": "c"
+        "utility": "c",
+        "algorithm": "c",
+        "typeinfo": "c",
+        "unordered_map": "c",
+        "complex": "c",
+        "new": "c"
     }
 }
