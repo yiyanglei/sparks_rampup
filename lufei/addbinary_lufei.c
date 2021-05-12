@@ -37,6 +37,7 @@ char * addBinary(char * a, char * b)
 		numa /= 10;
 	}
 	index = 1;
+
 	while (numb)//b转换成10进制
 	{
 		numb_ten += numb % 10 * index;
