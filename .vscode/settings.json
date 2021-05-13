@@ -8,6 +8,7 @@
         "typeinfo": "c",
         "unordered_map": "c",
         "complex": "c",
-        "new": "c"
+        "new": "c",
+        "merge.h": "c"
     }
 }
