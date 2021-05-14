@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "__string": "c",
+        "cstring": "c",
+        "memory": "c",
+        "utility": "c",
+        "algorithm": "c",
+        "typeinfo": "c",
+        "unordered_map": "c",
+        "complex": "c",
+        "new": "c"
+    }
+}
