@@ -8,3 +8,25 @@
 示例 2： 输入：nums1 = [1], m = 1, nums2 = [], n = 0
         输出：[1]
 '''
+
+
+def merge(nums1, m, nums2, n):
+    n1 = 0
+    n2 = 0
+    list = []
+    while n1 < m and n2 < n:
+        if nums1[n1] <= nums2[n2]:
+            list.append(nums1[n1])
+            n1 += 1
+        else:
+            list.append(nums2[n2])
+            n2 += 1
+    print(list)
+
+
+if __name__ == '__main__':
+    nums1 = [1, 2, 2, 4, 7, 9]
+    m = 6
+    nums2 = [3, 5, 8]
+    n = 3
+    merge(nums1, m, nums2, n)
