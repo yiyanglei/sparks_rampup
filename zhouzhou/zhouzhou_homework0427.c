@@ -43,6 +43,5 @@ int main(int argc,char ** argv)
         printf("0b%s + 0b%s = 0b%s", a, b, ret);
         free(ret);
     }
-	free(ret);
     return 0;
 }
