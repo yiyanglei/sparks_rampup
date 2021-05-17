@@ -19,6 +19,7 @@
 
 void merge(int* nums1, int m, int* nums2, int n)
 {
+
     int* nums3 = (int*)malloc(sizeof(int)*(m + n));
 	int a = 0, n1 = 0, n2 = 0;
 	while (n1 < m && n2 < n)
@@ -36,23 +37,13 @@ void merge(int* nums1, int m, int* nums2, int n)
 	{
 		memcpy(nums3 + a,nums1 + n1,sizeof (int)*(m-n1));
 	}
-<<<<<<< Updated upstream
 	if (n2 < n)
 	{
 		memcpy(nums3 + a, nums2 + n2, sizeof (int)*(n - n2));
 	}//Handle numbers which are not passed in
 	memcpy(nums1,nums3,sizeof(int)*(m+n));
 	free(nums3);
-=======
-	if (n1 < m){
-		memcpy(newA + idx,nums1 + n1,sizeof (int)*(m-n1));
-	}
-	if (n2 < n){
-		memcpy(newA + idx, nums2 + n2, sizeof (int)*(n - n2));
-	}
-	memcpy(nums1,newA,sizeof(int)*(m+n));
-	free(newA);
->>>>>>> Stashed changes
+	
 }
 
 int main(void)
