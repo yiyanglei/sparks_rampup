@@ -8,6 +8,7 @@
 示例 2： 输入：nums1 = [1], m = 1, nums2 = [], n = 0
         输出：[1]
 '''
+<<<<<<< Updated upstream
 
 
 def merge(nums1, m, nums2, n):
@@ -30,3 +31,5 @@ if __name__ == '__main__':
     nums2 = [3, 5, 8]
     n = 3
     merge(nums1, m, nums2, n)
+=======
+>>>>>>> Stashed changes
