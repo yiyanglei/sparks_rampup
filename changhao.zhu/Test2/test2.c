@@ -19,31 +19,29 @@
 
 void merge(int* nums1, int m, int* nums2, int n)
 {
-
     int* nums3 = (int*)malloc(sizeof(int)*(m + n));
-	int a = 0, n1 = 0, n2 = 0;
-	while (n1 < m && n2 < n)
+    int a = 0, n1 = 0, n2 = 0;
+    while (n1 < m && n2 < n)
+    {
+	if (nums1[n1] <= nums2[n2])
 	{
-		if (nums1[n1] <= nums2[n2])
-		{
-			nums3[a++] = nums1[n1++];
-		}
-		else
-		{
-			nums3[a++] = nums2[n2++];
-		}
-	}//Loop to compare nums1 and nums2 into nums3
-	if (n1 < m)
-	{
-		memcpy(nums3 + a,nums1 + n1,sizeof (int)*(m-n1));
+	    nums3[a++] = nums1[n1++];
 	}
-	if (n2 < n)
+	else
 	{
-		memcpy(nums3 + a, nums2 + n2, sizeof (int)*(n - n2));
-	}//Handle numbers which are not passed in
-	memcpy(nums1,nums3,sizeof(int)*(m+n));
-	free(nums3);
-	
+	    nums3[a++] = nums2[n2++];
+	}
+    }//Loop to compare nums1 and nums2 into nums3
+    if (n1 < m)
+    {
+	memcpy(nums3 + a,nums1 + n1,sizeof (int)*(m-n1));
+    }
+    if (n2 < n)
+    {
+	memcpy(nums3 + a, nums2 + n2, sizeof (int)*(n - n2));
+    }//Handle numbers which are not passed in
+    memcpy(nums1,nums3,sizeof(int)*(m+n));
+    free(nums3);	
 }
 
 int main(void)
