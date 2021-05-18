@@ -28,7 +28,6 @@ char * fun(char *a)
 char * addBinary(char * a, char * b)
 {   
 
-    //c = (char *)malloc(10 * sizeof(char));
     int z = 0;
     char m;
     int i, sum;
