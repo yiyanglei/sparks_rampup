@@ -23,20 +23,7 @@
 //参数说明：nums-数组，numsSize-数组的size，target-目标值，returnSize-返回的数组size
 int* twoSum(int* nums, int numsSize, int target, int* returnSize)
 {
-    int *a = (int*)malloc(sizeof(int)*2);
-    for(int i = 0; i < numsSize-1 ; i++)
-    {
-        for(int j = i+1; j < numsSize; j++)
-        {
-            if(nums[i]+nums[j] == target)
-            {
-               a[0] = i, a[1] = j;
-               return a;
-            }
-        }
-   }
-   *returnSize = 2;
-   return 0;
+    //pending
 }
 
 int main(void)
