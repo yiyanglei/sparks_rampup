@@ -29,7 +29,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize)
         {
             if (target - nums[idx2] == nums[idx1] )
             {
-                int* ret = malloc(sizeof(int) * 2);
+                int* ret = malloc(sizeof(int) * 2); //需要判断空间申请是否为空
                 ret[0] = idx1;
                 ret[1] = idx2;
                 return ret;
