@@ -20,24 +20,15 @@
 
 int removeDuplicates(int* nums, int numsSize){
 	//不要使用额外的数组空间
-    int i = 2;
-    int index = 0;
-    while (i < numsSize) 
-    {
-        if (nums[i-2] == nums[i - 1] && nums[i - 1]== nums[i]) 
-        {  
-            for (index = i-1 ; index < numsSize; index++) 
-            {
-                 nums[index-1] = nums[index];
+      int n = numsSize, i = 2, j = 2;
+        if (n < 3) return n;
+        while (j < n) {
+            if (nums[i-2]!=nums[j]) {
+                nums[i++] = nums[j];
             }
-            numsSize--;    
+            j++;
         }
-        else 
-        {
-            i++;
-        } 
-    }
-    return numsSize;
+        return i; 
 }
 
 int main(void)
