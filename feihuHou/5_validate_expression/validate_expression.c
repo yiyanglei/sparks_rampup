@@ -20,6 +20,7 @@
 
 #include "stdio.h"
 #include "stdlib.h"
+#include "string.h"
 #include "./include/typedef.h"
 #include "./include/stack.h"
 
@@ -28,12 +29,12 @@
 
 int validate_expression(const char * exp) {
     int len = strlen(exp);
+	int i=0;
 	Stack_t* p_stk = stack_new(len);
-	for (int i = 0; i < len + 1; i++) {
+	for (i= 0; i < len + 1; i++) {
 		if ('(' == exp[i]) {
 			stack_push(p_stk, '(');
-		}
-		else if (')' == exp[i]) {
+		}else if (')' == exp[i]) {
 			char C;
 			char* c = &C;
 			stack_top(p_stk, c);
